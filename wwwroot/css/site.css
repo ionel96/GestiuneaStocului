@@ -17,10 +17,6 @@ html {
   min-height: 100%;
 }
 
-/*body {
-  margin-bottom: 60px;
-}*/
-
 body {
   padding-top: 50px;
   margin-bottom: 60px;
@@ -32,7 +28,6 @@ body {
   width: 100%;
   z-index: 1030;
 }
-
 
 .logo-container {
   display: flex;

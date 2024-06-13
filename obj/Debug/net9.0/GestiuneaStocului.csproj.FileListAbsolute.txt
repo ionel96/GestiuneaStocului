@@ -197,3 +197,4 @@
 /Users/ionelboicu/Project/GestiuneaStocului/GestiuneaStocului/obj/Debug/net9.0/Gestiune.B51B8001.Up2Date
 /Users/ionelboicu/Project/GestiuneaStocului/GestiuneaStocului/bin/Debug/net9.0/Npgsql.dll
 /Users/ionelboicu/Project/GestiuneaStocului/GestiuneaStocului/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/ionelboicu/Project/GestiuneaStocului/GestiuneaStocului/obj/Debug/net9.0/GestiuneaStocului.sourcelink.json
