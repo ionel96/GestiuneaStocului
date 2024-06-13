@@ -1,0 +1,35 @@
+@model GestiuneaStocului.Models.Products
+
+@{
+    ViewData["Title"] = "ProductWithdrawal";
+}
+
+@if (ViewBag.SuccessMessage != null) {
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @ViewBag.SuccessMessage
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Close"></button>
+    </div>
+}
+
+@if (ViewBag.ErrorMessage != null) {
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.ErrorMessage
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<h2>Product Withdrawal</h2>
+
+<form asp-action="ProductWithdrawal" method="post">
+    <div class="form-group">
+        <label for="ProductName">Product Name</label>
+        <input type="text" id="ProductName" name="ProductName" class="form-control" required/>
+    </div>
+    <div class="form-group">
+        <label for="Quantity">Quantity</label>
+        <input type="number" class="form-control" id="Quantity" id="Quantity" name="Quantity" required/>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,41 @@
+@model GestiuneaStocului.Models.Products
+
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+@if (ViewBag.Message != null) {
+    <div class="alert alert-info">
+        @ViewBag.Message  <a asp-area="" asp-controller="Products" asp-action="UpdateStock">update the quantity?</a>
+    </div>
+}
+
+@if (TempData["SuccessMessage"] != null) {
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<h2>Add Product</h2>
+
+<form asp-action="AddProduct" method="post">
+    <div class="form-group">
+        <label>Product Name</label>
+        <input asp-for="Name" class="form-control" required/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Stock</label>
+        <input asp-for="Stock" class="form-control" required/>
+        <span asp-validation-for="Stock" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input asp-for="Price" class="form-control" required/>
+        <span asp-asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

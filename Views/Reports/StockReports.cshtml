@@ -1,0 +1,30 @@
+@model List<ProductReports>
+
+@{
+    ViewData["Title"] = "Stock Reports";
+}
+
+<h2>Stock Reports</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity In</th>
+            <th>Quantity Out</th>
+            <th>Final Quantity</th>
+        </tr>
+    <thead>
+    <tbody>
+        @foreach (var report in Model) {
+            <tr>
+                <td>@report.Product?.Name</td>
+                <td>@report.Product?.Price</td>
+                <td>@report.QuantityIn</td>
+                <td>@report.QuantityOut</td>
+                <td>@report.Stock</td>
+            </tr>
+        }
+    </tbody>
+</table>
